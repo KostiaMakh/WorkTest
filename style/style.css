@@ -36,7 +36,14 @@ header {
     padding: 10px 20px; }
     header .language-selector-block .language-selector {
       align-items: center;
-      justify-content: flex-end; }
+      justify-content: flex-end;
+      position: relative; }
+    header .language-selector-block input {
+      position: absolute;
+      visibility: hidden; }
+      header .language-selector-block input:checked + .button-lang {
+        background-color: #5f5f5f;
+        color: #f7f7f7; }
     header .language-selector-block .button-lang {
       padding: 8px 10px;
       background-color: #f7f7f7;
@@ -44,10 +51,6 @@ header {
       margin-left: 3px;
       color: #5f5f5f;
       cursor: pointer; }
-      header .language-selector-block .button-lang:hover {
-        background-color: #5f5f5f;
-        color: #f7f7f7;
-        transition: 0.3s; }
   header .header-logo-container {
     margin: auto;
     max-width: 980px;

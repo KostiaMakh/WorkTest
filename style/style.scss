@@ -50,9 +50,19 @@ header{
     background-color: $white;
     padding: 10px 20px;
     .language-selector{
-
       align-items: center;
       justify-content: flex-end;
+      position: relative;
+    }
+    input{
+      position: absolute;
+      visibility: hidden;
+      &:checked{
+        &+ .button-lang {
+          background-color: $gray-dark;
+          color: #f7f7f7;
+        }
+      }
     }
     .button-lang{
       padding: 8px 10px;
@@ -61,11 +71,6 @@ header{
       margin-left: 3px;
       color: $gray-dark;
       cursor: pointer;
-      &:hover{
-        background-color: $gray-dark;
-        color: #f7f7f7;
-        transition: 0.3s;
-      }
     }
   }
   .header-logo-container{
