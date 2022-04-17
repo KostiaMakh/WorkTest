@@ -455,11 +455,25 @@ footer{
       }
       nav{
         display: none;
+        border-top: 1px solid $white;
         li{
           display: block;
-          padding-bottom: 10px;
+          padding: 8px 8px 8px 35px;
+          position: relative;
+          a{
+            text-transform: inherit;
+          }
+          border: none;
           &:before{
-            display: none;
+            width: 15px;
+            height: 15px;
+            display: block;
+            font: normal normal normal 14px/1 FontAwesome;
+            content: "\f0da";
+            position: absolute;
+            color: $white;
+            top: 10px;
+            left: 15px;
           }
           &:after{
             display: none;
